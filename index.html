@@ -2,27 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
   <title>Frontend Mentor | GitHub user search app</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+	<link href="./src/styles/style.css" rel="stylesheet">
 </head>
 <body>
-
-  devfinder
-
-  Light
-  Dark
-
-  Search GitHub username...
-  Search
-
-  Joined
-
-  Repos
-  Followers
-  Following
-
+	<main>
+		<h1>devfinder</h1>
+		<form id="userForm">
+			<input type="text" id="username" placeholder="Enter GitHub username" required />
+			<button type="submit">Search</button>
+		</form>
+		<article id="user-info">
+			<img data-user-image src="" alt="User Avatar" />
+			<h2 data-user-name></h2>
+			<p data-user-login></p>
+			<p data-user-bio></p>
+			<dl>
+				<dt>Repos</dt>
+				<dd data-user-repos></dd>
+				<dt>Followers</dt>
+				<dd data-user-followers></dd>
+				<dt>Following</dt>
+				<dd data-user-following></dd>
+			</dl>
+			<dl>
+				<dt><img src="/public/icon-location.svg" alt="Location"></dt>
+				<dd data-user-location></dd>
+				<dt><img src="/public/icon-website.svg" alt="Website"></dt>
+				<dd data-user-blog></dd>
+				<dt><img src="/public/icon-twitter.svg" alt="Twitter"></dt>
+				<dd data-user-twitter></dd>
+				<dt><img src="/public/icon-company.svg" alt="Company"></dt>
+				<dd data-user-company></dd>
+			</dl>
+		</article>
+		<div id="error" class="error"></div>
+	</main>
+	<script type="module" src="./src/scripts/main.js"></script>
 </body>
 </html>
