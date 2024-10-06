@@ -10,16 +10,16 @@
 <body>
 	<main>
 		<h1>devfinder</h1>
-		<form id="userForm">
-			<input type="text" id="username" placeholder="Enter GitHub username" required />
-			<button type="submit">Search</button>
+		<form id="userForm" data-search-form>
+			<input type="text" data-search-input id="username" placeholder="Enter GitHub username" required />
+			<button type="submit" data-search-button>Search</button>
 		</form>
 		<article id="user-info">
 			<img data-user-image src="" alt="User Avatar" />
 			<h2 data-user-name></h2>
 			<p data-user-login></p>
 			<p data-user-bio></p>
-			<dl>
+			<dl class="rmv-description-list-defaults">
 				<dt>Repos</dt>
 				<dd data-user-repos></dd>
 				<dt>Followers</dt>
@@ -27,7 +27,7 @@
 				<dt>Following</dt>
 				<dd data-user-following></dd>
 			</dl>
-			<dl>
+			<dl class="rmv-description-list-defaults">
 				<dt><img src="/public/icon-location.svg" alt="Location"></dt>
 				<dd data-user-location></dd>
 				<dt><img src="/public/icon-website.svg" alt="Website"></dt>
