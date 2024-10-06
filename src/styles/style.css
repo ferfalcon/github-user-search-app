@@ -4,4 +4,75 @@
 
 body {
 	font-family: "Space Mono", monospace;
+	margin: 0;
+}
+
+main {
+	display: grid;
+	gap: 1rem;
+	padding: 1.5rem;
+}
+
+.user-card {
+	background: hsl(222 41% 20%);
+	padding: 2rem 1.5rem;
+	border-radius: 1rem;
+
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: 70px 1fr;
+	grid-template-areas: 
+		"image		name"
+		"image		login"
+		"image		date"
+		"bio			bio"
+		"follows	follows"
+		"data			data";
+
+	.user-card__image {
+		grid-area: image;
+		max-width: 70px;
+		border-radius: 100%;
+	}
+
+	.user-card__name {
+		grid-area: name;
+		margin: 0;
+	}
+
+	.user-card__login {
+		grid-area: login;
+		margin: 0
+	}
+
+	.user-card__date {
+		grid-area: date;
+		margin: 0
+	}
+
+	.user-card__bio {
+		grid-area: bio;
+		margin: 0
+	}
+
+	.user-card__repos-n-follows {
+		grid-area: follows;
+	}
+
+	.user-card__additional-data {
+		grid-area: data;
+	}
+}
+
+.repos-n-follows {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 1rem;
+	border-radius: 10px;
+	background: hsl(220 40% 13%);
+}
+
+.info-line {
+	display: flex;
+	gap: .75rem;
 }
