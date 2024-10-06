@@ -2,6 +2,7 @@
 *::before,
 *::after {
 	box-sizing: inherit;
+	color-scheme: light dark;
 }
 
 body {
@@ -13,4 +14,8 @@ img {
 	height: auto;
 	vertical-align: middle;
 	font-style: italic;
+}
+
+input {
+	font-family: inherit;
 }

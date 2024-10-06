@@ -1,0 +1,34 @@
+form {
+	display: flex;
+	align-items: center;
+	padding: .75rem;
+	gap: 1rem;
+	background: hsl(222 41% 20%);
+	border-radius: 1rem;
+
+	input {
+		flex-grow: 1;
+		border: transparent;
+		background: transparent;
+		line-height: 2.75;
+		text-indent: .5rem;
+		border-radius: .5rem;
+
+		&::placeholder {
+			color: white;
+		}
+
+		&:focus {
+			outline: dotted medium hsl(212 100% 50%);
+		}
+	}
+
+	button {
+		background-color: hsl(212 100% 50%);
+		padding: .875rem 1rem;
+		font-weight: 700;
+		font-size: 14px;
+		border-radius: 10px;
+		border: transparent;
+	}
+}
