@@ -11,47 +11,51 @@
 	<link href="./src/styles/style.css" rel="stylesheet">
 </head>
 <body>
-	<main>
-		<h1><a href="./">devfinder</a></h1>
+	<main data-search>
+		<h1><a class="search-heading" href="./">devfinder</a></h1>
 		<form id="userForm" data-search-form>
 			<label for="username"><img height="24" width="25" src="/public/icon-search.svg" alt="Enter GitHub username…"></label>
 			<input type="text" data-search-input id="username" placeholder="Enter GitHub username…" required />
 			<button type="submit" data-search-button>Search</button>
 		</form>
-		<article class="user-card">
-			<img class="user-card__image" data-user-image src="" alt="User Avatar" />
-			<h2 class="user-card__name" data-user-name></h2>
-			<p class="user-card__login" data-user-login></p>
-			<p class="user-card__date">Joined 25 Jan 2011</p>
-			<p class="user-card__bio" data-user-bio></p>
+		<article data-user-card class="user-card">
+			<img class="user-card__image" data-user-image src="./icon-website.svg" alt="User Avatar" />
+			<h2 class="user-card__name   user-card__name--type" data-user-name></h2>
+			<p class="user-card__login   user-card__login--type">
+				@<span data-user-login></span>
+			</p>
+			<p class="user-card__date   user-card__date--type">
+				Joined <span data-user-date></span>
+			</p>
+			<p class="user-card__bio   user-card__bio--type" data-user-bio></p>
 			<dl class="user-card__repos-n-follows   repos-n-follows   rmv-description-list-defaults">
 				<div>
-					<dt>Repos</dt>
+					<dt class="repos-n-follows__desc-term">Repos</dt>
 					<dd data-user-repos></dd>
 				</div>
 				<div>
-					<dt>Followers</dt>
+					<dt class="repos-n-follows__desc-term">Followers</dt>
 					<dd data-user-followers></dd>
 				</div>
 				<div>
-					<dt>Following</dt>
+					<dt class="repos-n-follows__desc-term">Following</dt>
 					<dd data-user-following></dd>
 				</div>
 			</dl>
 			<dl class="user-card__additional-data   additional-data   rmv-description-list-defaults">
-				<div class="info-line">
+				<div class="additional-data__info-line">
 					<dt><img src="/public/icon-location.svg" alt="Location"></dt>
 					<dd data-user-location></dd>
 				</div>
-				<div class="info-line">
+				<div class="additional-data__info-line">
 					<dt><img src="/public/icon-website.svg" alt="Website"></dt>
 					<dd data-user-blog></dd>
 				</div>
-				<div class="info-line">
+				<div class="additional-data__info-line">
 					<dt><img src="/public/icon-twitter.svg" alt="Twitter"></dt>
 					<dd data-user-twitter></dd>
 				</div>
-				<div class="info-line">
+				<div class="additional-data__info-line">
 					<dt><img src="/public/icon-company.svg" alt="Company"></dt>
 					<dd data-user-company></dd>
 				</div>

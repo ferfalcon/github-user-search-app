@@ -1,0 +1,10 @@
+:root {
+	--clr-main-100: hsl(0 0% 100%);
+	--clr-main-300: hsl(227 100% 98%);
+	--clr-main-400: hsl(212 100% 50%);
+	--clr-main-500: hsl(217 20% 51%);
+	--clr-main-600: hsl(217 35% 45%);
+	--clr-main-700: hsl(222 41% 20%);
+	--clr-main-800: hsl(217 21% 21%);
+	--clr-main-900: hsl(220 40% 13%);
+}

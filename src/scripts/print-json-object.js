@@ -2,6 +2,7 @@ export default function printJsonObject(_) {
 	printImage ('[data-user-image]');
 	printName (_.name, '[data-user-name]');
 	printLogin (_.login, '[data-user-login]');
+	printDate (_.created_at, '[data-user-date]');
 	printBio (_.bio, '[data-user-bio]');
 	printRepos (_.public_repos, '[data-user-repos]');
 	printFollowers (_.followers, '[data-user-followers]');
@@ -21,6 +22,10 @@ export default function printJsonObject(_) {
 	}
 
 	function printLogin (login, target) {
+		document.querySelector(target).innerHTML = login;
+	}
+
+	function printDate (login, target) {
 		document.querySelector(target).innerHTML = login;
 	}
 

@@ -3,7 +3,7 @@ form {
 	align-items: center;
 	padding: .75rem;
 	gap: 1rem;
-	background: hsl(222 41% 20%);
+	background: light-dark(white, var(--clr-main-700));
 	border-radius: 1rem;
 
 	input {
@@ -15,16 +15,16 @@ form {
 		border-radius: .5rem;
 
 		&::placeholder {
-			color: white;
+			color: light-dark(var(--clr-main-400), white);
 		}
 
 		&:focus {
-			outline: dotted medium hsl(212 100% 50%);
+			outline: dotted medium light-dark(white, var(--clr-main-400));
 		}
 	}
 
 	button {
-		background-color: hsl(212 100% 50%);
+		background-color: light-dark(white, var(--clr-main-400));
 		padding: .875rem 1rem;
 		font-weight: 700;
 		font-size: 14px;

@@ -2,6 +2,8 @@ import loadData from './async-fetch-json-data';
 import printJsonObject from './print-json-object';
 
 const dataUrl = 'https://api.github.com/users/';
+const userCard = document.querySelector('[data-user-card]');
+userCard.classList.add('hidden');
 
 document.querySelector('[data-search-form]').addEventListener('submit', function(event) {
 	event.preventDefault();
@@ -13,6 +15,7 @@ document.querySelector('[data-search-form]').addEventListener('submit', function
 
 	document.querySelector('[data-search-input]').value = "";
 	loadData(dataUrl + userName).then(data => printJsonObject(data));
+	userCard.classList.remove('hidden');
 })
 
 function showError(msg) {
